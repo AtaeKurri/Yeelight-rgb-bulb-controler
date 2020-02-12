@@ -1,0 +1,19 @@
+{
+  "ips": {
+    "chambre": "192.168.0.10"
+  },
+  "prereglage": {
+    "soir": {
+      "brightness": 44,
+      "rgb1": 108,
+      "rgb2": 0,
+      "rgb3": 255
+    },
+    "matin": {
+      "brightness": 1,
+      "rgb1": 210,
+      "rgb2": 125,
+      "rgb3": 255
+    }
+  }
+}
