@@ -9,6 +9,10 @@ I don't own Yeelight.
 This program is command-line based, it means it has no graphical interface for the moment.
 You can use multiple commands to control your rgb yeelight bulb.
 
+To use your bulb in the program, in your yeelight or mihome application on your smartphone, please turn on remote control from local network. Overwise it'll not work at all and the bulb will not accept any commands from the program.
+
+Then please use "addbulb <name> <ip of your bulb>" to add it to the config.json, or edit the file directly, then you can use the program.
+
 - <bulb name> turn on/off
 - <bulb name> pre <see config.json>
 - <bulb name> brightness int
