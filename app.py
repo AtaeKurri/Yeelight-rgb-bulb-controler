@@ -4,7 +4,7 @@
 #Version 1.0.1
 
 from yeelight import Bulb
-import json, jsonpickle
+import json, jsonpickle, shutil
 
 def main():
     with open("config.json", 'r') as config1:
@@ -33,7 +33,8 @@ def main():
 - <bulb name> brightness int
 - <bulb name> rgb int int int
 - addbulb <name> <ip>
-- reloadconf""")
+- reloadconf
+- backup""")
             main()
         elif commande[0] == "reloadconf":
             confirmation = input("Are you sure you want to reset your configuration file ? (Y/N) > ")
@@ -48,6 +49,9 @@ def main():
                 main()
             else:
                 main()
+        elif commande[0] == "backup":
+            shutil.copy("config.json", "config-backup.json")
+            print("Done")
         elif commande[0] in data1["ips"]:
             bulb = Bulb(data1["ips"][commande[0]])
             if commande[1] == "turn":
@@ -92,7 +96,8 @@ def main():
 - <bulb name> brightness int
 - <bulb name> rgb int int int
 - addbulb <name> <ip>
-- reloadconf""")
+- reloadconf
+- backup""")
                 main()
         elif not commande[0]:
             print("Please type 'help' to see the list of commands.")
