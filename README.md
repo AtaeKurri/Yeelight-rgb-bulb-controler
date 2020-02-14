@@ -18,6 +18,7 @@ Then please use "addbulb <name> <ip of your bulb>" to add it to the config.json,
 - <bulb name> brightness int
 - <bulb name> rgb int int int
 - addbulb <name> <ip>
+- reloadconf (Warning : This command resets the content of the config.json, only do it if your config file is corrupted)
   
 There is an config.json filled with examples, feel free to delete or modify them to your liking.
 But please, don't delete the config.json file or the program will no longer work
